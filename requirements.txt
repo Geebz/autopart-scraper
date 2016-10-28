@@ -2,3 +2,4 @@ Django==1.10.2
 gunicorn==19.6.0
 lxml==3.6.4
 requests==2.11.1
+whitenoise==3.2.2
