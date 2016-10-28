@@ -1,6 +1,5 @@
 from itertools import count
 from django.shortcuts import render
-from django.http import HttpResponse
 from requests import get
 from lxml import html
 
@@ -52,4 +51,6 @@ def index(request):
                 return
             yield parsed
 
-    return HttpResponse('')
+    return render(request, 'index.html', {
+        'rows': sum(parse_page(), [])
+    })

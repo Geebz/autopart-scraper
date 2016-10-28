@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Код</th>
+        <th>Наименование</th>
+        <th>Бренд</th>
+        <th>Кол-во на складе</th>
+        <th>Кол-во в резерве</th>
+        <th>Цена, грн.</th>
+        <th>Цена со скидкой, грн.</th>
+        <th>Примечание</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in rows %}
+      <tr>
+        <td>{{ row.id }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.brand }}</td>
+        <td>{{ row.available }}</td>
+        <td>{{ row.reserved }}</td>
+        <td>{{ row.price }}</td>
+        <td>{{ row.discount_price }}</td>
+        <td>{{ row.notes }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
